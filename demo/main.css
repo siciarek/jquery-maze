@@ -1,0 +1,14 @@
+body {
+    background: black;
+    color: white;
+    text-align:center;
+}
+
+div#console {
+    display: inline-block;
+    margin: 0 auto;
+    font-family: monospace;
+    font-size: 12px;
+    line-height: 8px;
+    white-space: pre;
+ }

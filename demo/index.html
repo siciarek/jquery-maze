@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title>JaySic jQuery Maze Plugin Demo Page</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link type="text/css" media="all" rel="stylesheet" href="main.css"/>
+    <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+
+    <script type="text/javascript" src="../jquery.maze.js"></script>
+</head>
+<body>
+
+<h1>JaySic jQuery Maze Plugin Demo Page</h1>
+
+<p><input type="button" onclick="location.reload()" value="Click to generate new maze" /></p>
+
+<div id="console"></div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        try {
+            var maze = $.Maze(3, 1);
+            var board = maze.get_board();
+        }
+        catch(e)
+        {
+            alert(e);
+            return;
+        }
+
+        var output = '';
+
+        for (var r = 0; r < maze.rows; r++) {
+            for (var c = 0; c < maze.cols; c++) {
+                output += (board[r][c] ? '&#9632;' : ' ');
+            }
+            output += "\n";
+        }
+
+        $('#console').append(output);
+    });
+
+</script>
+
+</body>
+</html>
