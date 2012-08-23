@@ -1,0 +1,3 @@
+[submodule "demo/jquery-stl"]
+	path = demo/jquery-stl
+	url = https://github.com/siciarek/jquery-stl.git
