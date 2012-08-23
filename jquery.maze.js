@@ -7,7 +7,7 @@
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.opensource.org/licenses/GPL-2.0
  */
-(function ($, document, undefined) {
+(function ($) {
 
     function rand(min, max) {
         var base = max - min + 1;
@@ -40,7 +40,7 @@
         };
 
         return $.extend({}, instance);
-    }
+    };
 
     $.Abilities = function (r, c) {
 
