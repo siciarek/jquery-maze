@@ -20,15 +20,20 @@ vertical corridors of created maze. Default values are: rows=25, cols=60.
 The lowest valid value for rows and cols is 2. If rows or cols value is set to value less then 2 - 
 Exception "The lowest valid value for rows and cols is 2" is thrown.
 
+```js
     var maze = $.Maze();
+```
 
-Method get_board() returns maze definition as a two dimensional array.
+Method `get_board()` returns maze definition as a two dimensional array.
 
+```js
     var maze = $.Maze(3, 3);
     var board = maze.get_board();
+```
 
-In the example above variable *board* can contain:
+In the example above variable `board` can contain:
 
+```js
     [
         [1, 1, 1, 1, 1, 0, 1],
         [1, 0, 1, 0, 0, 0, 1],
@@ -38,7 +43,7 @@ In the example above variable *board* can contain:
         [1, 0, 0, 0, 0, 0, 1],
         [1, 0, 1, 1, 1, 1, 1]
     ]
-
+```
 
 
 ## Development
