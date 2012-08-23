@@ -16,7 +16,9 @@ Include script *after* the jQuery library (unless you are packaging scripts some
 ## Usage
 
 Constructor can be called with two optional parameters (rows, cols), which mean number of horizontal and
-vertical corridors of created maze. Default values are: rows=25, cols=60. The lowest valid value for rows and cols is 2.
+vertical corridors of created maze. Default values are: rows=25, cols=60.
+The lowest valid value for rows and cols is 2. If rows or cols value is set to value less then 2 - 
+Exception "The lowest valid value for rows and cols is 2" is thrown.
 
     var maze = $.Maze();
 
