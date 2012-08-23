@@ -17,31 +17,6 @@
         return temp + min;
     }
 
-    $.Stack = function () {
-
-        var instance = {
-            container: [],
-
-            empty: function () {
-                return this.container.length == 0;
-            },
-
-            top: function () {
-                return this.container[this.container.length - 1];
-            },
-
-            pop: function () {
-                return this.container.pop();
-            },
-
-            push: function (value) {
-                this.container.push(value);
-            }
-        };
-
-        return $.extend({}, instance);
-    };
-
     $.Abilities = function (r, c) {
 
         var instance = {
@@ -57,8 +32,7 @@
         rows = rows || 25;
         cols = cols || 60;
 
-        if(!(rows >= 2 && cols >= 2))
-        {
+        if (!(rows >= 2 && cols >= 2)) {
             throw 'The lowest valid value for rows and cols is 2';
         }
 
@@ -86,7 +60,7 @@
             enter: [],
             exit: [],
 
-            abilities_stack: $.Stack(),
+            abilities_stack: {},
             maze_board: [],
 
             new: function (rows, cols) {
@@ -105,9 +79,8 @@
                     }
                 }
 
-                this.abilities_stack = $.Stack();
+                this.abilities_stack = $.stl.stack();
                 this.abilities_stack.push($.Abilities(1, 1));
-
             },
 
             make_move: function (direction) {
@@ -233,4 +206,5 @@
         return $.extend({}, instance);
     };
 
-})(jQuery, document);
+})
+    (jQuery, document);
