@@ -1,5 +1,5 @@
 /**
- * jQuery Maze generator v1.1b
+ * jQuery Maze generator v1.2b
  * https://github.com/siciarek/jquery-maze
  *
  * Copyright 2012, Jacek Siciarek
