@@ -2,7 +2,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
 <head>
-    <title>JaySic jQuery Maze Plugin Demo Page</title>
+    <title>JaySic jQuery Maze Generator Demo Page</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link type="text/css" media="all" rel="stylesheet" href="main.css"/>
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<h1>JaySic jQuery Maze Plugin Demo Page</h1>
+<h1>JaySic jQuery Maze Generator Demo Page</h1>
 
 <p><input type="button" onclick="location.reload()" value="Click to generate new maze" /></p>
 
@@ -23,7 +23,7 @@
     $(document).ready(function () {
 
         try {
-            var maze = $.Maze(3, 1);
+            var maze = $.Maze();
             var board = maze.get_board();
         }
         catch(e)

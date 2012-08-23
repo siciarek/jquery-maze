@@ -54,8 +54,8 @@
 
     $.Maze = function (rows, cols) {
 
-        rows = rows || 5;
-        cols = cols || 7;
+        rows = rows || 25;
+        cols = cols || 60;
 
         if(!(rows >= 2 && cols >= 2))
         {
@@ -211,7 +211,7 @@
                 } while ((door % 2 == 0) || this.maze_board[1][door] == this.WALL);
 
                 this.maze_board[0][door] = this.PATH;
-                this.door = { r: 0, c: door };
+                this.enter = { r: 0, c: door };
 
                 // CREATE EXIT:
 
